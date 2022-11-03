@@ -1,4 +1,5 @@
 window.onload=function(){
+    
     var is =document.getElementsByClassName("is");
     var total=document.getElementById("total");
     var btn=document.getElementById("btn");
@@ -8,43 +9,13 @@ window.onload=function(){
     var title=document.getElementById("title");
     var currentTime;
     console.log();
-    for(var i=0;i<is.length;i++){
-        is[i].onclick=function(){
-            var sum=0;
-            for(var j=0;j<is.length;j++){
-                if(j<=1){
-                    sum+=(is[j].value)*70;
-                }
-                else{
-                    sum+=(is[j].value)*80;
-                }
-                total.innerText=sum;
-            }
-        }
-    }
+    calSum();
+    
     document.getElementById("name").onclick=function(){
-        var sum=0;
-        for(var j=0;j<is.length;j++){
-            if(j<=1){
-                sum+=(is[j].value)*70;
-            }
-            else{
-                sum+=(is[j].value)*80;
-            }
-            total.innerText=sum;
-        }
+        calSum();    
     }
     document.getElementById("num").onclick=function(){
-        var sum=0;
-        for(var j=0;j<is.length;j++){
-            if(j<=1){
-                sum+=(is[j].value)*70;
-            }
-            else{
-                sum+=(is[j].value)*80;
-            }
-            total.innerText=sum;
-        }
+        calSum();
     }
     setInterval(function(){
         currentTime= new Date().toString().split(" ")[4];
@@ -93,5 +64,20 @@ window.onload=function(){
     };
 
 
-    
+    function calSum(){
+        for(var i=0;i<is.length;i++){
+            is[i].onclick=function(){
+                var sum=0;
+                for(var j=0;j<is.length;j++){
+                    if(j<=1){
+                        sum+=(is[j].value)*70;
+                    }
+                    else{
+                        sum+=(is[j].value)*80;
+                    }
+                    total.innerText=sum;
+                }
+            }
+        }
+    }
 };
