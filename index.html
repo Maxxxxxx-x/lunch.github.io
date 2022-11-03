@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;font-size:25px; }
@@ -43,7 +44,7 @@ input[type=submit]:hover {
 <h3>Contact Form</h3>
 
 <div class="container">
-  <form action="#" method="post" name="google">
+  <form action="#" method="POST" name="google">
     <label for="fname">名字</label>
     <input style="font-size:25px;color:blue;" type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -66,7 +67,8 @@ input[type=submit]:hover {
 </div>
 
     <script type="text/javascript">
-        const scriptURL='https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec'
+        const cors = 'https://cors-anywhere.herokuapp.com/'; // use cors-anywhere to fetch api data
+        const scriptURL=cors+'/https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec'
 
         const form = document.forms['google']
           
