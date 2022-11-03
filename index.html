@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {font-family: Arial, Helvetica, sans-serif;font-size:25px; }
@@ -67,17 +66,14 @@ input[type=submit]:hover {
 </div>
 
     <script type="text/javascript">
-        const cors = 'https://cors-anywhere.herokuapp.com/'; // use cors-anywhere to fetch api data
-        const scriptURL=cors+'https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec';
-       // const scriptURL='https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec'
-        console.log(scriptURL);
+        const scriptURL='https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec'
+
         const form = document.forms['google']
           
           form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => 
-              alert("上傳成功！！！"))
+              .then(response => alert("上傳成功！！！"))
               .catch(error => console.error('Error!', error.message))
           })
 
