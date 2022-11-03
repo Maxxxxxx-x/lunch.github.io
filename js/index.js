@@ -28,6 +28,9 @@ window.onload=function(){
         if(document.getElementById("name").value==""){
             alert("名字不可為空");
         }
+        else if(document.getElementById("sel").value.split("T")[1].split(":")[0]<11||document.getElementById("sel").value.split("T")[1].split(":")[0]>13){
+            alert("取餐時間須介於11:00~13:00");
+        }
         else{
             var objArr=[
                 document.getElementById("name").value,
