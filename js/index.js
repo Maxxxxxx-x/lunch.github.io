@@ -6,6 +6,7 @@ window.onload=function(){
     var as=document.getElementsByClassName("as");
     var main=document.getElementById("main");
     var title=document.getElementById("title");
+    var currentTime;
     console.log();
     for(var i=0;i<is.length;i++){
         is[i].onclick=function(){
@@ -22,8 +23,18 @@ window.onload=function(){
         }
     }
     setInterval(function(){
-        ct.innerText=new Date().toString().split(" ")[4];
+        currentTime= new Date().toString().split(" ")[4];
+        ct.innerText=currentTime;
+        if(currentTime.split(":")[0]>=10 && currentTime.split(":")[0]<=13){
+            btn.disabled=true;
+            btn.innerText="非訂餐期間";
+        }
+        else{
+            btn.disabled=false;
+            btn.innerText="送出";
+        }
     }, 1000);
+    
     btn.onclick=function(){
         if(document.getElementById("name").value==""){
             alert("名字不可為空");

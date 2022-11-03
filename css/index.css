@@ -151,12 +151,13 @@ label{
   right: 7px;
 }
 .footer{
+  padding-top: 2px;
   width:375px;
-  height: 50px;
+  height: 55px;
   background: brown;
 }
 .footer>h2{
-  line-height: 50px;
+  line-height: 25px;
   font-size: 14px;
   color: white;
   margin-left: 10px;
