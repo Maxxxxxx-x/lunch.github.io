@@ -12,10 +12,10 @@
 </head>
 <body>
 
-<h1 class="title">訂餐系統</h1>
+<h1 class="title" id="title">訂餐系統</h1>
 
 <div class="container">
-  <div class="main">
+  <div class="main" id="main">
     <div class="cal">
       <h1>總計金額</h1>
       <div class="total" id="total">0</div>
@@ -25,14 +25,14 @@
         <h1 class="na">葷食</h1>
         <img src="images/lu.webp" alt="">
         <div class="sum">
-          <span class="ls">數量：</span><input type="number" class="is">
+          <span class="ls">數量：</span><input type="number" min="0" class="is">
         </div>
       </div>
       <div class="c">
         <h1 class="na">素食</h1>
         <img src="images/lu.webp" alt="">
         <div class="sum">
-          <span class="ls">數量：</span><input type="number" class="is">
+          <span class="ls">數量：</span><input type="number" min="0" class="is">
         </div>
       </div>
     </div>
@@ -52,8 +52,11 @@
     <div class="rr">葷食：<span class="as"></span> 份</div>
     <div class="rr">素食：<span class="as"></span> 份</div>
     <div class="rr">金額：<span class="as"></span> 元</div>
-    <div class="rr">時間：<span class="as"></span></div>
+    <div class="rr">取餐：<span class="as"></span></div>
     <div class="rr">日期：<span class="as"></span></div>
+    <div class="thx">
+      <img src="images/thx.png" alt="">
+    </div>
 </div>
 </div>
 
