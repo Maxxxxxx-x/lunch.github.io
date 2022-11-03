@@ -9,16 +9,10 @@ window.onload=function(){
     var title=document.getElementById("title");
     var currentTime;
     console.log();
-    calSum();
-    
-    document.getElementById("name").onclick=function(){
-        calSum();    
-    }
-    document.getElementById("num").onclick=function(){
-        calSum();
-    }
+
     setInterval(function(){
         currentTime= new Date().toString().split(" ")[4];
+        calSum();
         ct.innerText=currentTime;
         if(currentTime.split(":")[0]>=10 && currentTime.split(":")[0]<=13){
             btn.disabled=true;
