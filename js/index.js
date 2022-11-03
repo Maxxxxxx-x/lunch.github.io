@@ -9,7 +9,11 @@ window.onload=function(){
     var title=document.getElementById("title");
     var currentTime;
     console.log();
-
+    for(var i=0;i<is.length;i++){
+        is[i].onclick=function(){
+            calSum();
+        }
+    }
     setInterval(function(){
         currentTime= new Date().toString().split(" ")[4];
         calSum();
@@ -62,8 +66,6 @@ window.onload=function(){
 
 
     function calSum(){
-        for(var i=0;i<is.length;i++){
-            is[i].onclick=function(){
                 var sum=0;
                 for(var j=0;j<is.length;j++){
                     if(j<=1){
@@ -72,9 +74,8 @@ window.onload=function(){
                     else{
                         sum+=(is[j].value)*80;
                     }
+                    console.log(sum);
                     total.innerText=sum;
                 }
             }
-        }
-    }
-};
+        };
