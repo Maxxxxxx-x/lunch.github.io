@@ -22,6 +22,30 @@ window.onload=function(){
             }
         }
     }
+    document.getElementById("name").onclick=function(){
+        var sum=0;
+        for(var j=0;j<is.length;j++){
+            if(j<=1){
+                sum+=(is[j].value)*70;
+            }
+            else{
+                sum+=(is[j].value)*80;
+            }
+            total.innerText=sum;
+        }
+    }
+    document.getElementById("num").onclick=function(){
+        var sum=0;
+        for(var j=0;j<is.length;j++){
+            if(j<=1){
+                sum+=(is[j].value)*70;
+            }
+            else{
+                sum+=(is[j].value)*80;
+            }
+            total.innerText=sum;
+        }
+    }
     setInterval(function(){
         currentTime= new Date().toString().split(" ")[4];
         ct.innerText=currentTime;
