@@ -44,7 +44,7 @@ input[type=submit]:hover {
 <h3>Contact Form</h3>
 
 <div class="container">
-  <form action="#" method="POST" name="google">
+  <form action="#" method="post" name="google">
     <label for="fname">名字</label>
     <input style="font-size:25px;color:blue;" type="text" id="fname" name="firstname" placeholder="Your name..">
 
@@ -68,14 +68,16 @@ input[type=submit]:hover {
 
     <script type="text/javascript">
         const cors = 'https://cors-anywhere.herokuapp.com/'; // use cors-anywhere to fetch api data
-        const scriptURL=cors+'/https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec'
-
+        //const scriptURL=cors+'https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec';
+        const scriptURL='https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec'
+        console.log(scriptURL);
         const form = document.forms['google']
           
           form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => alert("上傳成功！！！"))
+              .then(response => 
+              alert("上傳成功！！！"))
               .catch(error => console.error('Error!', error.message))
           })
 
