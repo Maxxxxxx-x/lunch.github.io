@@ -14,7 +14,6 @@ body{
   margin: 0 auto;
   width: 375px;
   border: 1px solid rgb(248, 161, 161);
-  height: 405px;
 }
 
 .main{
@@ -99,4 +98,30 @@ label{
   cursor: pointer;
   background: brown;
   color:white;
+}
+
+.rec{
+  width:375px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: none;
+  padding-bottom: 5px;
+}
+.rec>h1{
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.7;
+}
+.rec>p{
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.rr{
+  width:250px;
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 30px;
+  margin: 0 auto;
 }
