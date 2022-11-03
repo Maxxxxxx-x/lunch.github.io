@@ -2,6 +2,16 @@ body{
   margin-top: 10px;
   color: brown;
 }
+.top{
+  position: relative;
+}
+.ct{
+  position: absolute;
+  font-size: 14px;
+  right:40px;
+  bottom: 18px;
+  color: white;
+}
 .title{
   width: 375px;
   margin: 0 auto;
