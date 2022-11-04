@@ -18,7 +18,7 @@ window.onload=function(){
         currentTime= new Date().toString().split(" ")[4];
         calSum();
         ct.innerText=currentTime;
-        if(currentTime.split(":")[0]>=10 && currentTime.split(":")[0]<=13){
+        if(currentTime.split(":")[0]>=10 && currentTime.split(":")[0]<13){
             btn.disabled=true;
             btn.innerText="非訂餐期間";
         }

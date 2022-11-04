@@ -81,7 +81,6 @@ const Demo = new Vue({
         var as=document.getElementsByClassName("as");
         var main=document.getElementById("main");
         var title=document.getElementById("title");
-
         let objArr=[
             document.getElementById("name").value,
             document.getElementById("num").value,
@@ -94,7 +93,6 @@ const Demo = new Vue({
             document.getElementById("sel").value.split("T")[0],
         ]
         console.log("我是index 的flag")
-        console.log(!new RegExp(/^09[0-9]{8}$/).test(objArr[1]));
         if(document.getElementById("name").value==""){
             alert("名字不可為空");
             return false;
