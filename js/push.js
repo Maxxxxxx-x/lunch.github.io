@@ -93,12 +93,21 @@ const Demo = new Vue({
             document.getElementById("sel").value.split("T")[0],
         ]
         console.log("我是index 的flag")
+        console.log(!new RegExp(/^09[0-9]{8}$/).test(objArr[1]));
         if(document.getElementById("name").value==""){
             alert("名字不可為空");
             return false;
         }
         else if (is[0].value>5||is[1].value>5||is[2].value>5||is[3].value>5){
             alert("各餐點一次最多五份");
+            return false;
+        }
+        else if (objArr[0].length>=10){
+            alert("訂購姓名長度須小於10")
+            return false;
+        }
+        else if(!new RegExp(/^09[0-9]{8}$/).test(objArr[1])||objArr[1].length!=10){
+            alert("電話號碼輸入錯誤");
             return false;
         }
         else if(document.getElementById("sel").value.split("T")[1].split(":")[0]<11||document.getElementById("sel").value.split("T")[1].split(":")[0]>=13){
