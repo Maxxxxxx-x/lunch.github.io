@@ -92,12 +92,17 @@ const Demo = new Vue({
             document.getElementById("sel").value.split("T")[1],
             document.getElementById("sel").value.split("T")[0],
         ]
+        var sum = objArr[2]+objArr[3]+objArr[4]+objArr[5];
         if(document.getElementById("name").value.trim()=="" || document.getElementById("name").value.trim()==undefined){
             alert("名字不可為空");
             return false;
         }
         else if (is[0].value>5||is[1].value>5||is[2].value>5||is[3].value>5){
             alert("各餐點一次最多五份");
+            return false;
+        }
+        else if(sum==0){
+            alert("餐點至少訂購一份");
             return false;
         }
         else if (objArr[0].length>=10){
