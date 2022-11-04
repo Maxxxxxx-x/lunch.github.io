@@ -37,7 +37,7 @@ window.onload=function(){
             alert("取餐時間須介於11:00~13:00");
         }
         else{
-            var objArr=[
+            let objArr=[
                 document.getElementById("name").value,
                 document.getElementById("num").value,
                 is[0].value,
@@ -79,3 +79,4 @@ window.onload=function(){
                 }
             }
         };
+    

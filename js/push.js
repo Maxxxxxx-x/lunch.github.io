@@ -48,4 +48,4 @@ const Demo = new Vue({
         this.sendData();
       }
     },
-  })
+})
