@@ -61,8 +61,11 @@ const Demo = new Vue({
         if(flag){
 
             console.log("已送出");
-            Rec(flag);
-            this.sendData();
+            var x =Rec(flag);
+            if(x){
+                this.sendData();
+            }
+            
             
         } 
       }
@@ -90,7 +93,16 @@ const Demo = new Vue({
             document.getElementById("sel").value.split("T")[0],
         ]
         console.log("我是index 的flag")
-        if(flag){
+        if(document.getElementById("name").value==""){
+            alert("名字不可為空");
+            return false;
+        }
+        else if(document.getElementById("sel").value.split("T")[1].split(":")[0]<11||document.getElementById("sel").value.split("T")[1].split(":")[0]>=13){
+            console.log(document.getElementById("sel").value.split("T")[1].split(":")[0]);
+            alert("取餐時間須介於11:00~13:00");
+            return false;
+        }
+        else if(flag){
             btn.disabled=true;
             btn.innerText="不可再次提交";
             
@@ -100,6 +112,8 @@ const Demo = new Vue({
             rec.style.display="block";
             main.style.display="none";
             title.innerText="媽媽便當";
+
+            return true;
          }
 
     }

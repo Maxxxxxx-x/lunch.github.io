@@ -18,21 +18,21 @@ window.onload=function(){
         currentTime= new Date().toString().split(" ")[4];
         calSum();
         ct.innerText=currentTime;
-        if(currentTime.split(":")[0]>=10 && currentTime.split(":")[0]<=13){
-            btn.disabled=true;
-            btn.innerText="非訂餐期間";
-        }
-        else{
-            btn.disabled=false;
-            btn.innerText="送出";
-        }
+        // if(currentTime.split(":")[0]>=10 && currentTime.split(":")[0]<=13){
+        //     btn.disabled=true;
+        //     btn.innerText="非訂餐期間";
+        // }
+        // else{
+        //     btn.disabled=false;
+        //     btn.innerText="送出";
+        // }
     }, 1000);
     
     btn.onclick=function(){
         if(document.getElementById("name").value==""){
             alert("名字不可為空");
         }
-        else if(document.getElementById("sel").value.split("T")[1].split(":")[0]<11||document.getElementById("sel").value.split("T")[1].split(":")[0]>=13){
+        if(document.getElementById("sel").value.split("T")[1].split(":")[0]<11||document.getElementById("sel").value.split("T")[1].split(":")[0]>=13){
             console.log(document.getElementById("sel").value.split("T")[1].split(":")[0]);
             alert("取餐時間須介於11:00~13:00");
         }
