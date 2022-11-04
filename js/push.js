@@ -99,7 +99,7 @@ const Demo = new Vue({
             }
             rec.style.display="block";
             main.style.display="none";
-            title.innerText="訂單明細";
+            title.innerText="媽媽便當";
          }
 
     }
