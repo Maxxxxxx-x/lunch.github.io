@@ -97,6 +97,10 @@ const Demo = new Vue({
             alert("名字不可為空");
             return false;
         }
+        else if (is[0].value>5||is[1].value>5||is[2].value>5||is[3].value>5){
+            alert("各餐點一次最多五份");
+            return false;
+        }
         else if(document.getElementById("sel").value.split("T")[1].split(":")[0]<11||document.getElementById("sel").value.split("T")[1].split(":")[0]>=13){
             console.log(document.getElementById("sel").value.split("T")[1].split(":")[0]);
             alert("取餐時間須介於11:00~13:00");
