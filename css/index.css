@@ -55,6 +55,7 @@ body{
   color:red;
   margin-top: 15px;
   text-align: center;
+  border: 0;
 }
 .cont{
   width: 100%;

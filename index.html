@@ -4,11 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/index.css">
+
 <script src="js/index.js"></script>
 <script src="js/jquery2.2.3.min.js"></script>
-<style>
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 
-</style>
 </head>
 <body>
 
@@ -16,7 +16,8 @@
   <h1 class="title" id="title">訂餐系統</h1>
   <div class="ct" id="ct"></div>
 </div>
-<div class="container">
+<div class="container" id="app">
+  <form >
   <div class="main" id="main">
     <div class="cal">
       <h1>總計金額</h1>
@@ -27,38 +28,39 @@
         <h1 class="na">葷食</h1>
         <img src="images/lu.webp" alt="">
         <div class="sum">
-          <span class="ls">數量：</span><input type="number" min="0" class="is">
+          <span class="ls">數量：</span><input type="number" min="0" class="is" v-model="m1">
         </div>
       </div>
       <div class="c">
         <h1 class="na">素食</h1>
         <img src="images/lu.webp" alt="">
         <div class="sum">
-          <span class="ls">數量：</span><input type="number" min="0" class="is">
+          <span class="ls">數量：</span><input type="number" min="0" class="is" v-model="m2">
         </div>
       </div>
       <div class="c">
         <h1 class="na">葷食(加蛋）</h1>
         <img src="images/lu.webp" alt="">
         <div class="sum">
-          <span class="ls">數量：</span><input type="number" min="0" class="is">
+          <span class="ls">數量：</span><input type="number" min="0" class="is" v-model="m3">
         </div>
       </div>
       <div class="c">
         <h1 class="na">素食（加蛋）</h1>
         <img src="images/lu.webp" alt="">
         <div class="sum">
-          <span class="ls">數量：</span><input type="number" min="0" class="is">
+          <span class="ls">數量：</span><input type="number" min="0" class="is" v-model="m4">
         </div>
       </div>
     </div>
     <label for="lname">姓名：</label>
-    <input style="font-size:16px;color:black;" type="text" id="name" name="lastname" placeholder="請輸入姓名" ><br>
+    <input style="font-size:16px;color:black;" type="text" id="name" name="lastname" placeholder="請輸入姓名" v-model="name" ><br>
     <label for="lphone">學號：</label>
-    <input style="font-size:16px;color:black;" type="text" id="num" name="lastname" placeholder="請輸入學號" ><br>
+    <input style="font-size:16px;color:black;" type="text" id="num" name="lastname" placeholder="請輸入學號" v-model="num"><br>
     <label for="ltime">取餐時間：</label>
-    <input type="datetime-local" name="" id="sel" >
-    <button type="submit" class="btn" id="btn" >送出</button>
+    <input type="datetime-local" name="" id="sel" v-model="time">
+    <button type="button" :disabled="sending" @click="submit" class="btn" id="btn" >送出</button>
+  </form>
   </div>
   <div class="rec" id="rec">
     <h1>訂單明細</h1>
@@ -82,21 +84,6 @@
   <h2>訂餐時間：當日13:00 ~ 隔日10:00</h2>
 </div>
 </div>
-
-
-    <!-- <script type="text/javascript">
-        const scriptURL='https://cors-anywhere.herokuapp.com/https://script.google.com/macros/s/AKfycbykPZ0DwOPeO_SiSrihCiaXt7niQbMhdF8tK89ExPCF2En82JcKVXlhx5ye4TaVEGc/exec'
-
-        const form = document.forms['google']
-          
-          form.addEventListener('submit', e => {
-            e.preventDefault()
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-              .then(response => alert("上傳成功！！！"))
-              .catch(error => console.error('Error!', error.message))
-          })
-
-    </script> -->
-
+<script src="js/push.js"></script>
 </body>
 </html>

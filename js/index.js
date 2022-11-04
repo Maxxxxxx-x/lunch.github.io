@@ -33,6 +33,7 @@ window.onload=function(){
             alert("名字不可為空");
         }
         else if(document.getElementById("sel").value.split("T")[1].split(":")[0]<11||document.getElementById("sel").value.split("T")[1].split(":")[0]>13){
+            console.log(document.getElementById("sel").value.split("T")[1].split(":")[0]);
             alert("取餐時間須介於11:00~13:00");
         }
         else{
@@ -74,7 +75,6 @@ window.onload=function(){
                     else{
                         sum+=(is[j].value)*80;
                     }
-                    console.log(sum);
                     total.innerText=sum;
                 }
             }
