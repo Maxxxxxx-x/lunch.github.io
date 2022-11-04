@@ -92,9 +92,7 @@ const Demo = new Vue({
             document.getElementById("sel").value.split("T")[1],
             document.getElementById("sel").value.split("T")[0],
         ]
-        console.log("我是index 的flag")
-        console.log(document.getElementById("name").value.trim());
-        if(document.getElementById("name").value.trim()==""){
+        if(document.getElementById("name").value.trim()=="" || document.getElementById("name").value.trim()==undefined){
             alert("名字不可為空");
             return false;
         }
