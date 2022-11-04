@@ -60,9 +60,10 @@ const Demo = new Vue({
         const flag=confirm("是否確認送出？ 葷食："+objArr[2]+" 葷食(加蛋)："+objArr[3]+" 素食："+objArr[4]+" 素食（加蛋）："+objArr[5]+" 取餐時間："+objArr[7]);
         if(flag){
 
-            console.log("已送出");
+            
             var x =Rec(flag);
             if(x){
+                console.log("已送出");
                 this.sendData();
             }
             
