@@ -45,7 +45,61 @@ const Demo = new Vue({
       },
       submit() {
         console.log("submit");
-        this.sendData();
+        var is =document.getElementsByClassName("is");
+            let objArr=[
+                document.getElementById("name").value,
+                document.getElementById("num").value,
+                is[0].value,
+                is[2].value,
+                is[1].value,
+                is[3].value,
+                total.innerText,
+                document.getElementById("sel").value.split("T")[1],
+                document.getElementById("sel").value.split("T")[0],
+            ]
+        const flag=confirm("是否確認送出？ 葷食："+objArr[2]+" 葷食(加蛋)："+objArr[3]+" 素食："+objArr[4]+" 素食（加蛋）："+objArr[5]+" 取餐時間："+objArr[7]);
+        if(flag){
+
+            console.log("已送出");
+            Rec(flag);
+            this.sendData();
+            
+        } 
       }
     },
 })
+
+    function Rec(flag){
+        var is =document.getElementsByClassName("is");
+        var total=document.getElementById("total");
+        var btn=document.getElementById("btn");
+        var rec=document.getElementById("rec");
+        var as=document.getElementsByClassName("as");
+        var main=document.getElementById("main");
+        var title=document.getElementById("title");
+
+        let objArr=[
+            document.getElementById("name").value,
+            document.getElementById("num").value,
+            is[0].value,
+            is[2].value,
+            is[1].value,
+            is[3].value,
+            total.innerText,
+            document.getElementById("sel").value.split("T")[1],
+            document.getElementById("sel").value.split("T")[0],
+        ]
+        console.log("我是index 的flag")
+        if(flag){
+            btn.disabled=true;
+            btn.innerText="不可再次提交";
+            
+            for(var i=0;i<as.length;i++){
+                as[i].innerHTML=objArr[i];
+            }
+            rec.style.display="block";
+            main.style.display="none";
+            title.innerText="訂單明細";
+         }
+
+    }

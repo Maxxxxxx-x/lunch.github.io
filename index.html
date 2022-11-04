@@ -27,28 +27,28 @@
     <div class="cont">
       <div class="c">
         <h1 class="na">葷食</h1>
-        <img src="images/lu.webp" alt="">
+        <img src="images/lu.png" alt="">
         <div class="sum">
           <span class="ls">數量：</span><input type="number" min="0" class="is" v-model="m1">
         </div>
       </div>
       <div class="c">
         <h1 class="na">素食</h1>
-        <img src="images/lu.webp" alt="">
+        <img src="images/fruit.jpeg" alt="">
         <div class="sum">
           <span class="ls">數量：</span><input type="number" min="0" class="is" v-model="m2">
         </div>
       </div>
       <div class="c">
         <h1 class="na">葷食(加蛋）</h1>
-        <img src="images/lu.webp" alt="">
+        <img src="images/lu.png" alt="">
         <div class="sum">
           <span class="ls">數量：</span><input type="number" min="0" class="is" v-model="m3">
         </div>
       </div>
       <div class="c">
         <h1 class="na">素食（加蛋）</h1>
-        <img src="images/lu.webp" alt="">
+        <img src="images/fruit.jpeg" alt="">
         <div class="sum">
           <span class="ls">數量：</span><input type="number" min="0" class="is" v-model="m4">
         </div>
@@ -56,8 +56,8 @@
     </div>
     <label for="lname">姓名：</label>
     <input style="font-size:16px;color:black;" type="text" id="name" name="lastname" placeholder="請輸入姓名" v-model="name" ><br>
-    <label for="lphone">學號：</label>
-    <input style="font-size:16px;color:black;" type="text" id="num" name="lastname" placeholder="請輸入學號" v-model="num"><br>
+    <label for="lphone">電話：</label>
+    <input style="font-size:16px;color:black;" type="tel" id="num" name="lastname" placeholder="請輸入電話號碼" v-model="num"><br>
     <label for="ltime">取餐時間：</label>
     <input type="datetime-local" name="" id="sel" v-model="time">
     <button type="button" :disabled="sending" @click="submit" class="btn" id="btn" >送出</button>

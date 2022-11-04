@@ -36,33 +36,6 @@ window.onload=function(){
             console.log(document.getElementById("sel").value.split("T")[1].split(":")[0]);
             alert("取餐時間須介於11:00~13:00");
         }
-        else{
-            let objArr=[
-                document.getElementById("name").value,
-                document.getElementById("num").value,
-                is[0].value,
-                is[2].value,
-                is[1].value,
-                is[3].value,
-                total.innerText,
-                document.getElementById("sel").value.split("T")[1],
-                document.getElementById("sel").value.split("T")[0],
-            ]
-            
-            var flag=confirm("是否確認送出？ 葷食："+objArr[2]+" 葷食(加蛋)："+objArr[3]+" 素食："+objArr[4]+" 素食（加蛋）："+objArr[5]+" 取餐時間："+objArr[7]);
-            if(flag){
-                btn.disabled=true;
-                btn.innerText="不可再次提交";
-                
-                for(var i=0;i<as.length;i++){
-                    as[i].innerHTML=objArr[i];
-                }
-                rec.style.display="block";
-                main.style.display="none";
-                title.innerText="訂單明細";
-             }
-        }
-        
     };
 
 
