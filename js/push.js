@@ -109,8 +109,8 @@ const Demo = new Vue({
             alert("餐點至少訂購一份");
             return false;
         }
-        else if (objArr[0].length>=10){
-            alert("訂購姓名長度須小於10")
+        else if (objArr[0].length>10 || objArr[0].length<3){
+            alert("訂購姓名長度須介於3~10")
             return false;
         }
         else if(!new RegExp(/^09[0-9]{8}$/).test(objArr[1])||objArr[1].length!=10){
