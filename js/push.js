@@ -101,6 +101,10 @@ const Demo = new Vue({
             alert("各餐點一次最多五份");
             return false;
         }
+        else if (is[0].value<0||is[1].value<0||is[2].value<0||is[3].value<0){
+            alert("餐點數目不可為負值");
+            return false;
+        }
         else if(sum==0){
             alert("餐點至少訂購一份");
             return false;
